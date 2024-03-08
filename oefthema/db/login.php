@@ -20,7 +20,7 @@ function login($username, $password) {
     // Check if user exists
     if ($result->num_rows == 1) {
         $row = $result->fetch_assoc();
-        
+
         // Verify password
         if (password_verify($password, $row['password'])) {
             // Set session data
